@@ -18,7 +18,7 @@ public class MyRoute extends RouteBuilder {
     }
 
     @Override
-    public void configure() throws Exception {
+    public void configure() {
         from("direct:start")
                 .wireTap("seda:tap")
                 .to("log:result");
