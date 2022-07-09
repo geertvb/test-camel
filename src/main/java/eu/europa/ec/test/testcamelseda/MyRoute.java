@@ -47,6 +47,7 @@ public class MyRoute extends RouteBuilder {
         from("direct:result")
                 .aggregate(new GroupedMessageAggregationStrategy())
                 .simple("${exchangeProperty.correlationId}")
+                .completionSize(3)
                 .completionTimeout(10000L).to("log:result");
     }
 
