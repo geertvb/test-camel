@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="clean install" type="MavenRunConfiguration" factoryName="Maven">
+  <configuration default="false" name="seda - spring-boot:run " type="MavenRunConfiguration" factoryName="Maven">
     <MavenSettings>
       <option name="myGeneralSettings" />
       <option name="myRunnerSettings" />
@@ -10,16 +10,18 @@
           </option>
           <option name="goals">
             <list>
-              <option value="clean" />
-              <option value="install" />
+              <option value="spring-boot:run" />
+              <option value="-Dspring-boot.run.fork=false" />
             </list>
           </option>
           <option name="pomFileName" value="pom.xml" />
           <option name="profilesMap">
-            <map />
+            <map>
+              <entry key="citnet" value="false" />
+            </map>
           </option>
           <option name="resolveToWorkspace" value="false" />
-          <option name="workingDirPath" value="$PROJECT_DIR$" />
+          <option name="workingDirPath" value="$PROJECT_DIR$/test-camel-seda" />
         </MavenRunnerParameters>
       </option>
     </MavenSettings>

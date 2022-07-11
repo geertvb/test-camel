@@ -53,8 +53,8 @@ public class MyRoute extends RouteBuilder {
         from("seda:tap")
                 .process(sleep("tap", 3000L))
                 .multicast()
-                .to("direct:a")
-                .to("direct:b")
+                    .to("direct:a")
+                    .to("direct:b")
                 .end()
                 .setBody().constant("Tapped")
                 .to("direct:result");
